@@ -102,17 +102,24 @@ def organize_downloads(downloads_path):
 
 # --- How to use the script ---
 if __name__ == "__main__":
-    # IMPORTANT: Replace this with the actual path to your downloads folder.
-    # Examples:
-    # For Windows: r"C:\Users\YourUsername\Downloads"
-    # For macOS/Linux: "/Users/YourUsername/Downloads" or "/home/YourUsername/Downloads"
-    # Use 'r' before the string for Windows paths to treat backslashes as literal characters.
-    # You can also use os.path.expanduser('~/Downloads') for cross-platform home directory.
+    # This script organizes files in a downloads folder into category subfolders.
+    # To use it, set downloads_folder_path to the folder you want to organize.
+    #
+    # Instructions:
+    # 1. Replace the path in downloads_folder_path with your actual downloads directory.
+    # 2. Keep the 'r' prefix for Windows paths to preserve backslashes, for example:
+    #    downloads_folder_path = r"C:\Users\YourUsername\Downloads"
+    # 3. For macOS/Linux, use a Unix-style path:
+    #    downloads_folder_path = "/Users/YourUsername/Downloads"
+    # 4. Optionally, use auto-detection for a standard downloads folder:
+    #    downloads_folder_path = os.path.join(os.path.expanduser('~'), 'Downloads')
+    # 5. Save the file and run it with Python: python organize_downloads.py
+    #
+    # The script will create category folders inside the downloads folder and move files
+    # into those folders based on their extensions. Files that do not match any category
+    # are moved to the "Others" folder.
 
-    # Example: Auto-detect common downloads paths (adjust as needed)
-    # downloads_folder_path = os.path.join(os.path.expanduser('~'), 'Downloads')
-
-    # You can uncomment the line below and set a specific path if auto-detection doesn't work
+    # Set your downloads folder path here:
     downloads_folder_path = r"C:\Users\Lenovo\Downloads" # Windows example
     # downloads_folder_path = "/Users/YourUsername/Downloads" # macOS/Linux example
 
